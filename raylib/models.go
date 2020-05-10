@@ -332,14 +332,14 @@ func UnloadMaterial(material Material) {
 	C.UnloadMaterial(*cmaterial)
 }
 
-func SetMaterialTexture(material Material, mapType int32, texture Texture2D) {
+func SetMaterialTexture(material *Material, mapType int32, texture Texture2D) {
 	cmaterial := material.cptr()
 	cmapType := (C.int)(mapType)
 	ctexture := texture.cptr()
 	C.SetMaterialTexture(cmaterial, cmapType, *ctexture)
 }
 
-func SetModelMeshMaterial(model Model, meshId int32, materialId int32) {
+func SetModelMeshMaterial(model *Model, meshId int32, materialId int32) {
 	cmodel := model.cptr()
 	cmeshId := (C.int)(meshId)
 	cmaterialId := (C.int)(materialId)
