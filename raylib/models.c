@@ -903,12 +903,14 @@ void UnloadMaterial(Material material)
 // NOTE: Previous texture should be manually unloaded
 void SetMaterialTexture(Material *material, int mapType, Texture2D texture)
 {
+    TRACELOG(LOG_WARNING, "TMG: YAS1");
     material->maps[mapType].texture = texture;
 }
 
 // Set the material for a mesh
 void SetModelMeshMaterial(Model *model, int meshId, int materialId)
 {
+    TRACELOG(LOG_WARNING, "TMG: YAS2");
     if (meshId >= model->meshCount) TRACELOG(LOG_WARNING, "MESH: Id greater than mesh count");
     else if (materialId >= model->materialCount) TRACELOG(LOG_WARNING, "MATERIAL: Id greater than material count");
     else  model->meshMaterial[meshId] = materialId;
