@@ -343,7 +343,7 @@ func SetModelMeshMaterial(model Model, meshId int32, materialId int32) {
 	cmodel := model.cptr()
 	cmeshId := (C.int)(meshId)
 	cmaterialId := (C.int)(materialId)
-	C.SetModelMeshMaterial(*cmodel, cmeshId, cmaterialId)
+	C.SetModelMeshMaterial(cmodel, cmeshId, cmaterialId)
 }
 
 // DrawModel - Draw a model (with texture if set)
