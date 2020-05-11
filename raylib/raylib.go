@@ -809,12 +809,12 @@ type MaterialMap struct {
 type Model struct {
 	// Local transform matrix
 	Transform     Matrix
-	MeshCount     int64
+	MeshCount     int32
 	Meshes        *Mesh
-	MaterialCount int64
+	MaterialCount int32
 	Materials     *Material
-	MeshMaterial  *int64
-	BoneCount     int64
+	MeshMaterial  *int32
+	BoneCount     int32
 	Bones         *BoneInfo
 	BindPose      *Transform
 }
