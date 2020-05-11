@@ -808,17 +808,14 @@ type MaterialMap struct {
 
 type Model struct {
 	// Local transform matrix
-	Transform         Matrix
-	MeshCount         int32
-	Meshes            []Mesh
-	MaterialCount     int32
-	Materials         []Material
-	MeshMaterialCount int32
-	MeshMaterial      []int32
-	BoneCount         int32
-	Bones             []BoneInfo
-	BindPoseCount     int32
-	BindPose          []Transform
+	Transform Matrix
+	//MeshCount     int32
+	Meshes []Mesh
+	//MaterialCount int32
+	Materials    []Material
+	MeshMaterial *int32
+	Bones        *BoneInfo
+	BindPose     *Transform
 }
 
 // newModelFromPointer - Returns new Model from pointer
