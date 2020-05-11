@@ -921,13 +921,12 @@ type Shader struct {
 	// Shader program id
 	ID uint32
 	// Shader locations array
-	//Locs [MaxShaderLocations]int32
-	Locs unsafe.Pointer
+	Locs [MaxShaderLocations]int32
 }
 
 // NewShader - Returns new Shader
 func NewShader(id uint32, locs [MaxShaderLocations]int32) Shader {
-	return Shader{id, unsafe.Pointer(&locs[0])}
+	return Shader{id, locs}
 }
 
 // newShaderFromPointer - Returns new Shader from pointer
