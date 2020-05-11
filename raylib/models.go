@@ -7,6 +7,7 @@ package rl
 import "C"
 import (
 	"log"
+	"time"
 	"unsafe"
 )
 
@@ -346,6 +347,7 @@ func SetModelMeshMaterial(model *Model, meshId int32, materialId int32) {
 	log.Println(model)
 	cmodel := model.cptr()
 	log.Println(cmodel)
+	time.Sleep(time.Second * 5)
 	cmeshId := (C.int)(meshId)
 	cmaterialId := (C.int)(materialId)
 	C.SetModelMeshMaterial(cmodel, cmeshId, cmaterialId)
