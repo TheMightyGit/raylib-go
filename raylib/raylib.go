@@ -815,8 +815,8 @@ type Model struct {
 	Materials     *Material
 	MeshMaterial  *int32
 	BoneCount     int32
-	Bones         []BoneInfo
-	BindPose      []Transform
+	Bones         *BoneInfo
+	BindPose      *Transform
 }
 
 // newModelFromPointer - Returns new Model from pointer
