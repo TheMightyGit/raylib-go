@@ -813,12 +813,11 @@ type Model struct {
 	MeshCount     int32
 	Meshes        unsafe.Pointer
 	MaterialCount int32
-	//Materials     unsafe.Pointer
-	Materials    *Material
-	MeshMaterial unsafe.Pointer
-	BoneCount    int32
-	Bones        unsafe.Pointer
-	BindPose     unsafe.Pointer
+	Materials     unsafe.Pointer
+	MeshMaterial  unsafe.Pointer
+	BoneCount     int32
+	Bones         unsafe.Pointer
+	BindPose      unsafe.Pointer
 }
 
 // newModelFromPointer - Returns new Model from pointer
