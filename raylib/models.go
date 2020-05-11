@@ -5,7 +5,10 @@ package rl
 #include <stdlib.h>
 */
 import "C"
-import "unsafe"
+import (
+	"log"
+	"unsafe"
+)
 
 // cptr returns C pointer
 func (m *Mesh) cptr() *C.Mesh {
@@ -340,7 +343,9 @@ func SetMaterialTexture(material *Material, mapType int32, texture Texture2D) {
 }
 
 func SetModelMeshMaterial(model *Model, meshId int32, materialId int32) {
+	log.Println(model)
 	cmodel := model.cptr()
+	log.Println(cmodel)
 	cmeshId := (C.int)(meshId)
 	cmaterialId := (C.int)(materialId)
 	C.SetModelMeshMaterial(cmodel, cmeshId, cmaterialId)
