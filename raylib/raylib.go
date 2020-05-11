@@ -810,13 +810,13 @@ type Model struct {
 	// Local transform matrix
 	Transform     Matrix
 	MeshCount     int32
-	Meshes        unsafe.Pointer
+	Meshes        []Mesh
 	MaterialCount int32
-	Materials     unsafe.Pointer
-	MeshMaterial  unsafe.Pointer
+	Materials     []Material
+	MeshMaterial  *int32
 	BoneCount     int32
-	Bones         unsafe.Pointer
-	BindPose      unsafe.Pointer
+	Bones         []BoneInfo
+	BindPose      []Transform
 }
 
 // newModelFromPointer - Returns new Model from pointer
