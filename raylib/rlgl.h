@@ -2696,14 +2696,14 @@ void rlDrawMesh(Mesh mesh, Material material, Matrix transform)
     {
         TRACELOG(LOG_WARNING, "GIT: %d", material.maps[i].texture.id);
 
-        if (material.maps[i].texture.id > 0)
-        {
+        //if (material.maps[i].texture.id > 0)
+        //{
             glActiveTexture(GL_TEXTURE0 + i);
             if ((i == MAP_IRRADIANCE) || (i == MAP_PREFILTER) || (i == MAP_CUBEMAP)) glBindTexture(GL_TEXTURE_CUBE_MAP, material.maps[i].texture.id);
             else glBindTexture(GL_TEXTURE_2D, material.maps[i].texture.id);
 
             glUniform1i(material.shader.locs[LOC_MAP_DIFFUSE + i], i);
-        }
+        //}
     }
 
     // Bind vertex array objects (or VBOs)
