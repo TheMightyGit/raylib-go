@@ -904,6 +904,9 @@ void UnloadMaterial(Material material)
 void SetMaterialTexture(Material *material, int mapType, Texture2D texture)
 {
     TRACELOG(LOG_WARNING, "TMG: YAS1");
+    TRACELOG(LOG_WARNING, "TMG: %p", material);
+    TRACELOG(LOG_WARNING, "TMG: %p", material->maps);
+    TRACELOG(LOG_WARNING, "TMG: %d", mapType);
     material->maps[mapType].texture = texture;
 }
 
