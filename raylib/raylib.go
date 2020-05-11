@@ -921,7 +921,8 @@ type Shader struct {
 	// Shader program id
 	ID uint32
 	// Shader locations array
-	Locs [MaxShaderLocations]int32
+	//Locs [MaxShaderLocations]int32
+	Locs unsafe.Pointer
 }
 
 // NewShader - Returns new Shader
