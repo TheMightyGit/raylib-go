@@ -786,7 +786,7 @@ type Material struct {
 	// Shader
 	Shader Shader
 	// Maps
-	Maps [MaxMaterialMaps]MaterialMap
+	Maps *[MaxMaterialMaps]MaterialMap
 	// Generic parameters (if required)
 	Params unsafe.Pointer
 }
