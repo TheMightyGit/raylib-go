@@ -813,7 +813,7 @@ type Model struct {
 	Meshes        []Mesh
 	MaterialCount int32
 	Materials     []Material
-	MeshMaterial  []int32
+	MeshMaterial  *int32
 	BoneCount     int32
 	Bones         []BoneInfo
 	BindPose      []Transform
