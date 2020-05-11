@@ -810,9 +810,9 @@ type Model struct {
 	// Local transform matrix
 	Transform     Matrix
 	MeshCount     int32
-	Meshes        []Mesh
+	Meshes        *Mesh
 	MaterialCount int32
-	Materials     []Material
+	Materials     *Material
 	MeshMaterial  *int32
 	BoneCount     int32
 	Bones         []BoneInfo
