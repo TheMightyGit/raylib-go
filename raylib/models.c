@@ -921,6 +921,7 @@ void SetModelMeshMaterial(Model *model, int meshId, int materialId)
     else  model->meshMaterial[meshId] = materialId;
     TRACELOG(LOG_WARNING, "TMG: YAS3");
     TRACELOG(LOG_WARNING, "TMG: %d", sizeof(int));
+    TRACELOG(LOG_WARNING, "TMG: %d", sizeof(Model));
     TRACELOG(LOG_WARNING, "TMG: [%p]", model);
     TRACELOG(LOG_WARNING, "TMG: [%p]", model->meshMaterial);
     TRACELOG(LOG_WARNING, "TMG: [%d]", model->meshCount);
