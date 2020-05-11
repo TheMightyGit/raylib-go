@@ -342,9 +342,10 @@ func SetMaterialTexture(material *Material, mapType int32, texture Texture2D) {
 	C.SetMaterialTexture(cmaterial, cmapType, *ctexture)
 }
 
-func SetModelMeshMaterial(model *Model, meshId int32, materialId int32) {
+func SetModelMeshMaterial(model Model, meshId int32, materialId int32) {
 	//log.Println(model)
-	cmodel := model.cptr()
+	//cmodel := model.cptr()
+	cmodel := (*C.Model)(unsafe.Pointer(&model))
 	log.Println(cmodel)
 	//time.Sleep(time.Second * 5)
 	cmeshId := (C.int)(meshId)
