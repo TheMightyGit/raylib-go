@@ -2694,7 +2694,7 @@ void rlDrawMesh(Mesh mesh, Material material, Matrix transform)
     // Bind active texture maps (if available)
     for (int i = 0; i < MAX_MATERIAL_MAPS; i++)
     {
-        TRACELOG(LOG_WARNING, "GIT: %d", material.maps[i].texture.id)
+        TRACELOG(LOG_WARNING, "GIT: %d", material.maps[i].texture.id);
 
         if (material.maps[i].texture.id > 0)
         {
