@@ -789,7 +789,7 @@ type Material struct {
 	//Maps [MaxMaterialMaps]MaterialMap
 	Maps unsafe.Pointer
 	// Generic parameters (if required)
-	Params *float32
+	Params unsafe.Pointer
 }
 
 // newMaterialFromPointer - Returns new Material from pointer
