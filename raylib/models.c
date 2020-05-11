@@ -913,6 +913,8 @@ void SetModelMeshMaterial(Model *model, int meshId, int materialId)
     TRACELOG(LOG_WARNING, "TMG: YAS2");
     TRACELOG(LOG_WARNING, "TMG: [%p]", model);
     TRACELOG(LOG_WARNING, "TMG: [%p]", model->meshMaterial);
+    TRACELOG(LOG_WARNING, "TMG: [%d]", model->meshCount);
+    TRACELOG(LOG_WARNING, "TMG: [%d]", model->materialCount);
     if (meshId >= model->meshCount) TRACELOG(LOG_WARNING, "MESH: Id greater than mesh count");
     else if (materialId >= model->materialCount) TRACELOG(LOG_WARNING, "MATERIAL: Id greater than material count");
     else  model->meshMaterial[meshId] = materialId;
