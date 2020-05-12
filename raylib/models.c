@@ -878,7 +878,7 @@ Material LoadMaterialDefault(void)
     //material.maps[MAP_NORMAL].texture;         // NOTE: By default, not set
     //material.maps[MAP_SPECULAR].texture;       // NOTE: By default, not set
 
-    material.maps[MAP_DIFFUSE].color = BLUE;    // Diffuse color
+    material.maps[MAP_DIFFUSE].color = WHITE;    // Diffuse color
     material.maps[MAP_SPECULAR].color = WHITE;   // Specular color
 
     return material;

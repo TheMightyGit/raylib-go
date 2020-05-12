@@ -6,7 +6,6 @@ package rl
 */
 import "C"
 import (
-	"log"
 	"unsafe"
 )
 
@@ -342,6 +341,7 @@ func SetMaterialTexture(material *Material, mapType int32, texture Texture2D) {
 	C.SetMaterialTexture(cmaterial, cmapType, *ctexture)
 }
 
+/*
 func SetModelMeshMaterial(model *Model, meshId int32, materialId int32) {
 	//log.Println(model)
 	cmodel := model.cptr()
@@ -351,6 +351,7 @@ func SetModelMeshMaterial(model *Model, meshId int32, materialId int32) {
 	cmaterialId := (C.int)(materialId)
 	C.SetModelMeshMaterial(cmodel, cmeshId, cmaterialId)
 }
+*/
 
 // DrawModel - Draw a model (with texture if set)
 func DrawModel(model Model, position Vector3, scale float32, tint Color) {
